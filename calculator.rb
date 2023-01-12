@@ -1,7 +1,5 @@
-print("Введите первое число: ")
-x=gets.chomp().to_i
-print("Введите второе число: ")
-y=gets.chomp().to_i
+print("Введите два числа через пробел: ")
+x,y=gets.split.map(&:to_i)
 puts "сложение " + (x+y).to_s
 puts "вычитание " + (x-y).to_s
 puts "умножение " + (x*y).to_s
