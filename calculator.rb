@@ -25,10 +25,3 @@ else
   puts "корень " + Math.sqrt(x+y).round(3).to_s
   puts "логарифм " + Math.log(x+y).round(3).to_s
 end
-
-
-
-
-
-
->>>>>>> Stashed changes
