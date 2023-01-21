@@ -1,9 +1,4 @@
-print("Введите два числа через пробел или с операцией: ")
-input_array = gets.split
-x = input_array[0].to_i
-if input_array.size > 2
-  y = input_array[2].to_i
-  operation = input_array[1]
+def calculate(x,y,operation)  
   if operation == "+"
     puts x+y
   elsif operation == "-"
@@ -13,8 +8,9 @@ if input_array.size > 2
   elsif operation == "/"
     puts x/y
   end
-else 
-  y = input_array[1].to_i
+end
+
+def calculate2(x,y)
   puts "сложение " + (x+y).to_s
   puts "вычитание " + (x-y).to_s
   puts "умножение " + (x*y).to_s
@@ -25,3 +21,39 @@ else
   puts "корень " + Math.sqrt(x+y).round(3).to_s
   puts "логарифм " + Math.log(x+y).round(3).to_s
 end
+
+print("Введите два числа через пробел: ")
+input_array = gets.split
+x = input_array[0].to_i
+if input_array.size > 2
+  y = input_array[2].to_i
+  operation = input_array[1]
+  calculate(x,y,operation)
+else
+  y = input_array[1].to_i
+  calculate2(x,y)
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+	
+
