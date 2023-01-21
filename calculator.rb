@@ -1,13 +1,11 @@
-def calculate(x,y,operation)  
-  if operation == "+"
-    puts x+y
-  elsif operation == "-"
-    puts x-y
-  elsif operation == "*"
-    puts x*y
-  elsif operation == "/"
-    puts x/y
+def calculate(x,y,operation) 
+  case operation
+    when operation == "+"
+    when operation == "-"
+    when operation == "*"
+    when operation == "/"	
   end
+  puts x+y,x-y,x*y,x/y
 end
 
 def calculate2(x,y)
