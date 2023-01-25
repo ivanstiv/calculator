@@ -1,13 +1,13 @@
 def calculate(x,y,operation)
   case operation
-    when "+" 
-	  x+y
-    when "-" 
-      x-y
-  	when "*" 
-  	  x*y
-  	when "/" 
-  	  x/y
+     when "+" 
+       x+y
+     when "-" 
+       x-y
+  	 when "*" 
+  	   x*y
+  	 when "/" 
+  	   x/y
   end
 end
 
