@@ -1,11 +1,14 @@
-def calculate(x,y,operation) 
-  case operation
-    when operation == "+"
-    when operation == "-"
-    when operation == "*"
-    when operation == "/"	
+def calculate(x,y,operation)
+	case operation
+	when "+" 
+	    (x+y)
+    when "-" 
+    	(x-y)
+  	when "*" 
+  		(x*y)
+  	when "/" 
+  		(x/y)
   end
-  puts x+y,x-y,x*y,x/y
 end
 
 def calculate2(x,y)
@@ -26,11 +29,17 @@ x = input_array[0].to_i
 if input_array.size > 2
   y = input_array[2].to_i
   operation = input_array[1]
-  calculate(x,y,operation)
+ puts calculate(x,y,operation)
 else
   y = input_array[1].to_i
   calculate2(x,y)
 end
+
+
+
+
+
+
 
 
 
