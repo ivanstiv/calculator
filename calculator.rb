@@ -7,7 +7,7 @@ def calculate(x,y,operation)
   when "*" 
     x*y
   when "/" 
-  	x/y
+    x/y
   end
 end
 
