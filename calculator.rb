@@ -1,36 +1,47 @@
-def calculate(x,y,operation)
-  case operation
-  when "+" 
-    x+y
-  when "-" 
-    x-y
-  when "*" 
-    x*y
-  when "/" 
-    x/y
-  end
-end
-
-def calculate2(x,y)
-  puts "сложение " + (x+y).to_s
-  puts "вычитание " + (x-y).to_s
-  puts "умножение " + (x*y).to_s
-  puts "деление с остатком " + (x/y.to_f).round(3).to_s
-  puts "результат остатка от деления " + (x%y).to_s
-  puts "возведение одного числа в степень " + (x**y).to_s
-  puts "модуль суммы этих чисел " + (x+y).abs.to_s
-  puts "корень " + Math.sqrt(x+y).round(3).to_s
-  puts "логарифм " + Math.log(x+y).round(3).to_s
+def calculate2(x,y,sign)
+  case sign
+    when "+"
+      x+y
+    when "-"
+      x-y
+    when "*"
+      x*y
+    when "/"
+      x/y
+    end
 end
 
 print("Введите два числа через пробел: ")
-input_array = gets.split
-x = input_array[0].to_i
-if input_array.size > 2
-  y = input_array[2].to_i
-  operation = input_array[1]
-  puts calculate(x,y,operation)
+array = gets.split
+x = array[0].to_i
+if array.size > 2
+    y = array[2].to_i
+    sign = array[1]
+    puts calculate2(x,y,sign)
 else
-  y = input_array[1].to_i
-  calculate2(x,y)
+    y = array[1].to_i
+    operations = {
+    "+" => ['Сложение: ', x+y],
+    "-" => ['Вычитание: ', x-y],
+    "*" => ['Умножение: ', x*y],
+    "/" => ['Деление нацело: ', x/y],
+    "%" => ['Остаток от деления: ', x/y],
+    "**" => ['Возведение в степень: ', x**y],
+    "++" => ['Модуль суммы этих чисел: ', (x+y).abs],
+    "//" => ['Корень: ', Math.sqrt(x+y).round(3)],
+    "#" =>  ['Логарифм: ', Math.log(x+y).round(3)]}
+      operations.each do |k,v|
+      puts v[0]+v[1].to_s
 end
+end
+
+
+
+
+
+
+
+
+
+
+
