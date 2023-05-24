@@ -15,9 +15,9 @@ print("Введите два числа через пробел: ")
 array = gets.split
 x = array[0].to_i
 if array.size > 2
-    y = array[2].to_i
-    sign = array[1]
-    puts calculate2(x,y,sign)
+  y = array[2].to_i
+  sign = array[1]
+  puts calculate2(x,y,sign)
 else
     y = array[1].to_i
     operations = {
