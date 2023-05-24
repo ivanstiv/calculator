@@ -19,8 +19,8 @@ if array.size > 2
   sign = array[1]
   puts calculate2(x,y,sign)
 else
-    y = array[1].to_i
-    operations = {
+  y = array[1].to_i
+  operations = {
     "+" => ['Сложение: ', x+y],
     "-" => ['Вычитание: ', x-y],
     "*" => ['Умножение: ', x*y],
@@ -29,9 +29,9 @@ else
     "**" => ['Возведение в степень: ', x**y],
     "++" => ['Модуль суммы этих чисел: ', (x+y).abs],
     "//" => ['Корень: ', Math.sqrt(x+y).round(3)],
-    "#" =>  ['Логарифм: ', Math.log(x+y).round(3)]}
-      operations.each do |k,v|
-      puts v[0]+v[1].to_s
+    "#" =>  ['Логарифм: ', Math.log(x+y).round(3)]
+  }
+  operations.each do |k,v|
+    puts v[0]+v[1].to_s
+  end
 end
-end
-
