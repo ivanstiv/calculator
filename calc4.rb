@@ -1,4 +1,5 @@
 def calculate2(x,y,sign)
+	MY_CONST = "operations"
   case sign
     when "+"
       x+y
