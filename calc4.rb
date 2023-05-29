@@ -37,8 +37,8 @@ if array.size > 2
   sign = array[1]
   puts calculate2(x,y,sign)
 else
-   y = array[1].to_i
-   puts calculate3(x,y)
+  y = array[1].to_i
+  calculate3(x,y)
 end
    
 
