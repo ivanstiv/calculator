@@ -41,7 +41,3 @@ else
   calculate3(x,y)
 end
    
-
- 
-
-
