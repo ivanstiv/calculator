@@ -16,4 +16,3 @@ def roman_to_int(roman)
     int >= number ? [result + int, int] : [result - int, number]
   end.first
 end
-
