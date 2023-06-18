@@ -1,10 +1,9 @@
-def is_roman(string)
-  is_roman = "Roman"
-    if string.match?(/\A[IVXCLDM]*\z/)
-  	  return is_roman
-else
-  is_roman = "Integer"
-    string.match?(/\A\d*\z/)
-  	  return is_roman
+def detect_number(symbol)
+  detect_number = :Roman 
+    if symbol.match?(/\A[IVXCLDM]*\z/)
+  	 return detect_number
+elsif symbol.match?(/\A\d*\z/)
+  detect_number = :Integer
+  	 return detect_number
 end
 end
