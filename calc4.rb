@@ -1,3 +1,6 @@
+require "./number_detector"
+require "./int_to_rom"
+require "./roman_to_integer"
 def calculate2(x,y,sign)
   case sign
     when "+"
@@ -31,13 +34,15 @@ end
 
 print("Введите два числа через пробел: ")
 array = gets.split
-x = array[0].to_i
+type = detect_number(array[0])
+x = type == :roman ? roman_to_int(array[0]) : array[0].to_i 
 if array.size > 2
-  y = array[2].to_i
+  y = type == :roman ? roman_to_int(array[2]) : array[2].to_i 
   sign = array[1]
-  puts calculate2(x,y,sign)
+  result = calculate2(x,y,sign)
+  puts type == :roman ? convert_to_old_roman(result) : result
 else
   y = array[1].to_i
   calculate3(x,y)
 end
-   
+
